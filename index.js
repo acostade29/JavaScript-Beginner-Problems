@@ -76,7 +76,7 @@ let myName = 'Alfonso'.toLowerCase();
 console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years. `)
 
 
-
+// ----------------------------------------------------------------
 // Let’s create a program that keeps track of the way the environment changes with the seasons. Write a conditional statement to make this happen!
 
 
@@ -92,4 +92,32 @@ if (season === 'spring') {
   console.log('It\'s sunny and warm because it\'s summer!');
 } else {
   console.log('Invalid season.');
+}
+
+
+// --------------------------------------------------------------
+
+// Let’s write a switch statement to decide what medal to award an athlete.
+
+let athleteFinalPosition = 'first place';
+
+
+
+switch(athleteFinalPosition) {
+case'first place':
+console.log('You get the gold medal!');
+break;
+
+case'second place':
+console.log('You get the silver medal!');
+break;
+
+case'third place':
+console.log('You get the bronze medal!');
+break;
+
+default:
+console.log('No medal awarded.');
+break;
+
 }
