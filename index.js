@@ -121,3 +121,66 @@ console.log('No medal awarded.');
 break;
 
 }
+
+
+// --------------------------------------------------------------------
+
+You’ve learned a powerful tool in JavaScript: control flow! It’s so powerful, in fact, that it can be used to tell someone’s fortune.
+
+In this project we will build the Magic Eight Ball using control flow in JavaScript.
+
+The user will be able to input a question, then our program will output a random fortune.
+
+
+//1 set a userName in a blank string//
+let userName = "Alfonso.";
+//2 create a tenary expression to do if the user enter a name or not//
+userName = 'Jane' ?  
+  console.log(`Hello, ${userName}`) : console.log('Hello!'); 
+
+//3 create a variable userQuestion. the value of the variable should be a string that is the question the user wants to ask the Magic Eight Ball//
+
+let userQuestion = 'would I become a developer ? '
+
+//4 write a console log for user questions //
+
+console.log(userQuestion);
+
+//generate a random number from 0 to 7//
+
+const randomNumber = Math.floor(Math.random() * 8);
+
+console.log(randomNumber);
+
+//6 create one more variable named eightBall, set it equal to an empty string//
+
+let eightBall = '';
+
+//7 create a control flow use switch statement//
+
+switch (randomNumber) {
+  case 0:
+    eightBall = ('It is certain');
+    break;
+  case 1:
+    console.log('It is decidedly so');
+    break;
+  case 2:
+    console.log('Reply hazy try again');
+ break;
+  case 3:
+    console.log('Cannot predict now');
+     break;
+  case 4:
+    console.log('Do not count on it');
+     break;
+  case 5:
+    console.log('My sources say no');
+     break;
+  case 6:
+    console.log('Outlook not so good');
+    break;
+  case 7:
+    console.log('Signs point to yes');
+    break;
+}
