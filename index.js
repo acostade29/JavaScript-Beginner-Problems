@@ -251,3 +251,44 @@ if (runnerArriveEarly && runnerAge >= 18) {
 // Get the computer’s choice.
 // Compare the two choices and determine a winner.
 // Start the program and display the results.
+
+
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  if (userInput === 'rock' || userInput ==='paper' || userInput === 'scissor') {
+    return userInput } else { return 'Error!'}
+  };
+
+
+const getComputerChoice = () => {
+ const randomNumber =Math.floor(Math.random() * 3);
+ switch (randomNumber) {
+   case 0:
+   return 'rock';
+   case 1:
+   return 'paper';
+   case 2:
+   return 'scissor'
+ }
+}
+
+
+const determineWinner = (userChoice, computerChoice) =>  {
+  if ( userChoice ===  computerChoice) {
+    return 'tie'
+  } else   if ( userChoice === 'rock' && computerChoice === 'paper') {
+    return 'lose'
+  
+} else   if ( userChoice === 'paper' && computerChoice === 'rock') {
+    return 'win'
+  
+} else   if ( userChoice === 'scissors' && computerChoice === 'rock') {
+    return 'lose'
+  
+} else  ( userChoice === 'scissors' && computerChoice === 'paper') 
+    return 'win'
+};
+
+console.log(determineWinner('paper', 'scissors')); // prints something like 'The computer won!'
+console.log(determineWinner('paper', 'paper')); // prints something like 'The game is a tie!'
+console.log(determineWinner('paper', 'rock')); // prints something like 'The user won!'
